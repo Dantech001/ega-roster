@@ -1,6 +1,7 @@
 # Elite Global Athletes — roster site
 
-Live: https://ega-roster.netlify.app
+Live: https://eliteglobalathletes.com
+(`ega-roster.netlify.app` still serves it and is the CNAME target; don't retire it.)
 
 Hand-coded static site. No build step: `index.html`, `styles.css`, `script.js`
 and `assets/` are served as-is from the repository root.
