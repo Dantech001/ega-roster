@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elite Global Athletes — Global Basketball Management</title>
+  <meta name="description" content="Elite Global Athletes represents the next generation of basketball. We guide elite players from the college spotlight to the professional stage — contracts, NIL, brand and global placement." />
+  <meta name="theme-color" content="#1C5236" />
+
+  <!-- Set theme before paint to avoid flash -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("ega-theme");
+        document.documentElement.setAttribute("data-theme", saved === "dark" ? "dark" : "light");
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- NAV -->
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a class="brand" href="#top" aria-label="Elite Global Athletes home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="30" height="30" role="img" aria-label="EGA emblem">
+            <circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M2 16h28M16 2v28M6 6c5 4 5 16 0 20M26 6c-5 4-5 16 0 20" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          </svg>
+        </span>
+        <span class="brand__type">Elite Global<br/>Athletes</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#roster">Roster</a>
+        <a href="#services">Representation</a>
+        <a href="#floor">On the floor</a>
+        <a href="#founder">Agency</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" title="Toggle theme">
+          <svg class="theme-toggle__sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" stroke-linecap="round"/>
+          </svg>
+          <svg class="theme-toggle__moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M21 12.8A8.5 8.5 0 1111.2 3a6.6 6.6 0 009.8 9.8z" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <a class="btn btn--primary nav__cta" href="#apply">Request representation</a>
+        <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="nav__mobile" id="mobileMenu" aria-label="Mobile">
+      <a href="#roster">Roster</a>
+      <a href="#services">Representation</a>
+      <a href="#floor">On the floor</a>
+      <a href="#founder">Agency</a>
+      <a class="btn btn--primary" href="#apply">Request representation</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__bg">
+        <img src="assets/hero-bg.jpg" alt="A player rising for a jump shot on an outdoor court at sunrise." fetchpriority="high" width="1920" height="1280" />
+        <div class="hero__scrim" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero__content">
+        <h1 class="hero__title">The next<br/>generation,<br/><span>represented.</span></h1>
+        <p class="hero__lede">
+          Elite Global Athletes guides elite basketball players from the college
+          spotlight to the professional stage — every contract, every deal, every
+          border. You carry the ball. We carry the rest.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--lg" href="#apply">Request representation</a>
+          <a class="btn btn--outline btn--lg" href="#roster">Meet the roster</a>
+        </div>
+        <p class="hero__placed">Placing Players Globally!</p>
+      </div>
+    </section>
+
+    <!-- SIGNED marquee -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Saniah Parker <i>Signed</i></span>
+        <span>Alexus Mobley <i>Signed</i></span>
+        <span>Ivane Tensaie <i>Now available</i></span>
+        <span>Ashanti Barnes <i>Signed</i></span>
+        <span>Cara Misskey <i>Signed</i></span>
+        <span>Tatum Thompson <i>Signed</i></span>
+        <span>Kennedy Basham <i>Now available</i></span>
+        <span>Kiley Capstraw <i>Now available</i></span>
+        <span>Grace Lancaster <i>Signed</i></span>
+        <span>Nissa Sam-Grant <i>Signed</i></span>
+        <span>Julia Tuchscherer <i>Signed</i></span>
+        <span>Jayla Smith <i>Now available</i></span>
+        <span>Cheyenne Rowe <i>Signed</i></span>
+        <span>Jaylin Reed <i>Now available</i></span>
+        <span>Abby Conlee <i>Signed</i></span>
+        <span>Kylie Lavelle <i>Signed</i></span>
+        <span>Jade Hill <i>Signed</i></span>
+        <span>Jo Langbehn <i>Signed</i></span>
+        <span>David Oputa <i>Signed</i></span>
+        <span>Cydney Rivera <i>Now available</i></span>
+        <span>Olivia Crigler <i>Now available</i></span>
+        <span>Jainaba Konateh <i>Now available</i></span>
+        <span>Tessa Towers <i>NIL</i></span>
+        <span>Saniah Parker <i>Signed</i></span>
+        <span>Alexus Mobley <i>Signed</i></span>
+        <span>Ivane Tensaie <i>Now available</i></span>
+        <span>Ashanti Barnes <i>Signed</i></span>
+        <span>Cara Misskey <i>Signed</i></span>
+        <span>Tatum Thompson <i>Signed</i></span>
+        <span>Kennedy Basham <i>Now available</i></span>
+        <span>Kiley Capstraw <i>Now available</i></span>
+        <span>Grace Lancaster <i>Signed</i></span>
+        <span>Nissa Sam-Grant <i>Signed</i></span>
+        <span>Julia Tuchscherer <i>Signed</i></span>
+        <span>Jayla Smith <i>Now available</i></span>
+        <span>Cheyenne Rowe <i>Signed</i></span>
+        <span>Jaylin Reed <i>Now available</i></span>
+        <span>Abby Conlee <i>Signed</i></span>
+        <span>Kylie Lavelle <i>Signed</i></span>
+        <span>Jade Hill <i>Signed</i></span>
+        <span>Jo Langbehn <i>Signed</i></span>
+        <span>David Oputa <i>Signed</i></span>
+        <span>Cydney Rivera <i>Now available</i></span>
+        <span>Olivia Crigler <i>Now available</i></span>
+        <span>Jainaba Konateh <i>Now available</i></span>
+        <span>Tessa Towers <i>NIL</i></span>
+      </div>
+    </div>
+
+    <!-- VALUE CARDS -->
+    <section class="cards" aria-label="What representation looks like">
+      <article class="card reveal">
+        <h2>Career representation</h2>
+        <p>Contracts, negotiations, and the long game. We sit on your side of the
+          table and fight for the deal your game deserves — at home and overseas.</p>
+        <a class="card__link" href="#services">How we work</a>
+      </article>
+
+      <article class="card card--primary reveal" data-delay="1">
+        <h2 class="card__hero">Legends<br/>play here</h2>
+        <p>A short, selective roster. Full-time attention. Wherever the game takes
+          you, we are already there building what comes next.</p>
+        <a class="card__link card__link--on" href="#apply">Apply for 2026</a>
+        <span class="card__ball" aria-hidden="true"></span>
+      </article>
+
+      <article class="card reveal" data-delay="2">
+        <h2>Brand &amp; NIL</h2>
+        <p>Turn your game into a name. Endorsements, media, and a brand that keeps
+          earning long after the final buzzer — owned by you, built by us.</p>
+        <a class="card__link" href="#services">Build your brand</a>
+      </article>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+      <div class="section-head reveal">
+        <h2>Everything but<br/>the jump shot.</h2>
+        <p class="section-head__sub">One team handling the business of your career, so you can keep your
+          head in the game. This is the bench we put behind every athlete.</p>
+      </div>
+
+      <div class="services__grid">
+        <article class="service reveal">
+          <div class="service__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 7h16M4 12h16M4 17h10" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Contracts &amp; negotiation</h3>
+          <p>Pro deals, collegiate moves, and overseas placement — read, valued, and
+            negotiated line by line in your favour.</p>
+        </article>
+        <article class="service reveal" data-delay="1">
+          <div class="service__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>NIL &amp; endorsements</h3>
+          <p>Brand partnerships that fit who you are, structured to pay now and
+            compound for years after the whistle.</p>
+        </article>
+        <article class="service reveal" data-delay="2">
+          <div class="service__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>
+          </div>
+          <h3>Global placement</h3>
+          <p>A scouting network across eleven countries. When a league opens a door,
+            we already know who is on the other side.</p>
+        </article>
+        <article class="service reveal">
+          <div class="service__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2v6M5 9l2 2M19 9l-2 2M4 21a8 8 0 0116 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Media &amp; PR</h3>
+          <p>Announcements, features, and the kind of story that makes scouts,
+            sponsors, and fans lean in.</p>
+        </article>
+        <article class="service reveal" data-delay="1">
+          <div class="service__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 19V5M4 19h16M8 16v-4M12 16V9M16 16v-7" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Draft &amp; combine prep</h3>
+          <p>Film, metrics, and the workouts that move you up the board — packaged
+            for the people who make the call.</p>
+        </article>
+        <article class="service reveal" data-delay="2">
+          <div class="service__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg>
+          </div>
+          <h3>Life off the court</h3>
+          <p>Finance, relocation, recovery, and the small things that keep a long
+            career steady. You are more than a stat line to us.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ROSTER -->
+    <section class="roster" id="roster">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <h2>Welcome to EGA.</h2>
+        </div>
+        <p class="section-head__sub">A short list of athletes we are proud to represent. Every signing is
+          a long-term commitment — to the player, and to the career behind the name.</p>
+      </div>
+
+      <div class="roster__grid">
+        <article class="player reveal">
+          <div class="player__photo player__photo--slides">
+            <img src="assets/player-saniah-parker.jpg" alt="Saniah Parker bringing the ball up the floor in a Tennessee State uniform." loading="lazy" width="900" height="1100" />
+            <img class="player__slide" src="assets/player-saniah-parker-2.jpg" alt="Saniah Parker on the floor in a Tennessee State uniform." loading="lazy" width="900" height="1100" />
+            <span class="player__tag">Signed</span>
+          </div>
+          <div class="player__meta">
+            <h3>Saniah Parker</h3>
+            <p class="player__pos"><span>Guard</span><span>5'9"</span></p>
+            <p class="player__team"><b>Nottingham Wildcats</b><span>UK</span></p>
+            <p class="player__bio">A distinct knack for the ball and incredible defensive instincts — a
+              relentless competitor, and a 1,000+ point scorer in college.</p>
+            <ul class="player__stats">
+              <li><b>1,000+</b> Career points</li><li><b>Tennessee State</b> College</li>
+            </ul>
+          </div>
+        </article>
+
+
+        <article class="player reveal" data-delay="1">
+          <div class="player__photo player__photo--slides">
+            <img src="assets/player-alexus-mobley.jpg" alt="Alexus Mobley crouching with a basketball in an Akron uniform." loading="lazy" width="900" height="1100" />
+            <img class="player__slide" src="assets/player-alexus-mobley-2.jpg" alt="Alexus Mobley driving the ball for Loyola." loading="lazy" width="900" height="1100" />
+            <span class="player__tag">Signed</span>
+          </div>
+          <div class="player__meta">
+            <h3>Alexus Mobley</h3>
+            <p class="player__pos"><span>Guard</span><span>5'7"</span></p>
+            <p class="player__team"><b>North Adelaide Rockets</b><span>Australia</span></p>
+            <p class="player__bio">An explosive guard — a prolific scorer and defensive force across JUCO and
+              NCAA Division I. Gets to the rim, scores at all three levels, and challenges her matchup all game.</p>
+            <ul class="player__stats">
+              <li><b>1,000+</b> Career points</li><li><b>JUCO → DI</b> College path</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="player reveal" data-delay="2">
+          <div class="player__photo player__photo--slides">
+            <img src="assets/player-ivane-tensaie.jpg" alt="Ivane Tensaie releasing a jump shot in a UTEP uniform." loading="lazy" width="900" height="1100" />
+            <img class="player__slide" src="assets/player-ivane-tensaie-2.jpg" alt="Ivane Tensaie in UTEP's orange kit during a game." loading="lazy" width="900" height="1100" />
+            <span class="player__tag player__tag--available">Now available</span>
+          </div>
+          <div class="player__meta">
+            <h3>Ivane Tensaie</h3>
+            <p class="player__pos"><span>Guard</span><span>5'7"</span></p>
+            <p class="player__team"><b>UTEP</b><span>Conference USA</span></p>
+            <p class="player__bio">A fierce defender with an offensive tenacity that never lets her matchup settle.
+              Named CUSA Player of the Week in December 2025 after a 2–0 week averaging 22.5 points on 65% from three.</p>
+            <ul class="player__stats">
+              <li><b>8</b> 3PM record</li><li><b>All-CUSA</b> Preseason</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="player reveal">
+          <div class="player__photo player__photo--slides">
+            <img src="assets/player-ashanti-barnes.jpg" alt="Ashanti Barnes smiling in a JMU warm-up top before a game." loading="lazy" width="900" height="1100" />
+            <img class="player__slide" src="assets/player-ashanti-barnes-2.jpg" alt="Ashanti Barnes bringing the ball up for JMU." loading="lazy" width="900" height="1100" />
+            <span class="player__tag">Signed</span>
+          </div>
+          <div class="player__meta">
+            <h3>Ashanti Barnes</h3>
+            <p class="player__pos"><span>Forward</span><span>6'2"</span></p>
+            <p class="player__team"><b>Pakenham Warriors</b><span>Australia</span></p>
+            <p class="player__bio">Established herself as a primary, dominant figure in the Sun Belt Conference —
+              recognised by the conference in back-to-back seasons, on both ends of the floor.</p>
+            <ul class="player__stats">
+              <li><b>2nd Team</b> Sun Belt ’25–26</li><li><b>3rd Team</b> Sun Belt ’24–25</li><li><b>All-Defensive</b> ’25–26</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="player reveal" data-delay="1">
+          <div class="player__photo player__photo--slides">
+            <img src="assets/player-cara-misskey.jpg" alt="Cara Misskey pushing the ball up the floor for Leicester Riders." loading="lazy" width="900" height="1100" />
+            <img class="player__slide" src="assets/player-cara-misskey-2.jpg" alt="Cara Misskey finishing at the rim for the Regina Cougars." loading="lazy" width="900" height="1100" />
+            <span class="player__tag">Signed</span>
+          </div>
+          <div class="player__meta">
+            <h3>Cara Misskey</h3>
+            <p class="player__pos"><span>Point guard</span></p>
+            <p class="player__team"><b>Leicester Riders</b><span>UK</span></p>
+            <p class="player__bio">A stellar point guard with a professional aura, who finished her career as the
+              University of Regina’s all-time assists leader — breaking a program record that had stood at 389.
+              A three-time all-star.</p>
+            <ul class="player__stats">
+              <li><b>426</b> Assists, record</li><li><b>1,083</b> Points, 10th</li><li><b>175</b> Steals, 4th</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="player reveal" data-delay="2">
+          <div class="player__photo player__photo--slides">
+            <img src="assets/player-tatum-thompson.jpg" alt="Tatum Thompson rising into a contested jump shot for Boise State." loading="lazy" width="900" height="1100" />
+            <img class="player__slide" src="assets/player-tatum-thompson-2.jpg" alt="Tatum Thompson following through on a shot for CPN." loading="lazy" width="900" height="1100" />
+            <span class="player__tag">Signed</span>
+          </div>
+          <div class="player__meta">
+            <h3>Tatum Thompson</h3>
+            <p class="player__pos"><span>Forward</span><span>6'1"</span></p>
+            <p class="player__team"><b>CPN</b><span>Portugal</span></p>
+            <p class="player__bio">A two-time All-Mountain West selection who led the Broncos through her senior
+              season — and topped the conference in field-goal percentage.</p>
+            <ul class="player__stats">
+              <li><b>14.2</b> PPG</li><li><b>6.9</b> RPG</li><li><b>47.9%</b> FG</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="player reveal">
+          <div class="player__photo player__photo--slides">
+            <img src="assets/player-kennedy-basham.jpg" alt="Kennedy Basham defending in a TCU uniform." loading="lazy" width="900" height="1100" />
+            <img class="player__slide" src="assets/player-kennedy-basham-2.jpg" alt="Kennedy Basham on court for TCU, her name across the back of her jersey." loading="lazy" width="900" height="1100" />
+            <span class="player__tag player__tag--available">Now available</span>
+          </div>
+          <div class="player__meta">
+            <h3>Kennedy Basham</h3>
+            <p class="player__pos"><span>Forward / Center</span><span>6'7"</span></p>
+            <p class="player__team"><b>Free agent</b><span>TCU alum</span></p>
+            <p class="player__bio">A dynamic forward-center known for elite rim protection and shot-blocking.
+              Extremely mobile for her size, finishes with both hands, and contributes efficiently on both ends.</p>
+            <ul class="player__stats">
+              <li><b>6'7"</b> Frame</li><li><b>Shot-blocking</b> Specialty</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="player reveal" data-delay="1">
+          <div class="player__photo player__photo--slides">
+            <img src="assets/player-kiley-capstraw.jpg" alt="Kiley Capstraw rising into a contested jump shot for Yale." loading="lazy" width="900" height="1100" />
+            <img class="player__slide" src="assets/player-kiley-capstraw-2.jpg" alt="Kiley Capstraw sizing up her defender for Yale." loading="lazy" width="900" height="1100" />
+            <span class="player__tag player__tag--available">Now available</span>
+          </div>
+          <div class="player__meta">
+            <h3>Kiley Capstraw</h3>
+            <p class="player__pos"><span>Guard</span><span>5'11"</span></p>
+            <p class="player__team"><b>Yale</b><span>Ivy League</span></p>
+            <p class="player__bio">A gifted guard-forward who plays anywhere from one to three — a primary playmaker
+              and elite rebounding guard. A floor general who demands respect at all three levels, quick and mobile,
+              and a consistent threat from deep even without the ball.</p>
+            <ul class="player__stats">
+              <li><b>1–3</b> Positions</li><li><b>Floor general</b> Role</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="player reveal" data-delay="2">
+          <div class="player__photo player__photo--slides">
+            <img src="assets/player-grace-lancaster.jpg" alt="Grace Lancaster walking the floor in a UPEI uniform." loading="lazy" width="900" height="1100" />
+            <img class="player__slide" src="assets/player-grace-lancaster-2.jpg" alt="Grace Lancaster releasing a jump shot for UPEI." loading="lazy" width="900" height="1100" />
+            <span class="player__tag">Signed</span>
+          </div>
+          <div class="player__meta">
+            <h3>Grace Lancaster</h3>
+            <p class="player__pos"><span>Guard</span><span>5'9"</span></p>
+            <p class="player__team"><b>GRIBrandoense</b><span>Portugal</span></p>
+            <p class="player__bio">A very tough guard out of Nova Scotia who went from reserve to one of the top
+              offensive focal points in her conference — exceptional footwork and a quick release that let her
+              score from every angle on the floor.</p>
+            <ul class="player__stats">
+              <li><b>Nova Scotia</b> Canada</li><li><b>UPEI</b> U Sports</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="player reveal" data-delay="1">
+          <div class="player__photo player__photo--slides">
+            <img src="assets/player-nissa-sam-grant.jpg" alt="Nissa Sam-Grant holding the Sun Belt Conference championship trophy." loading="lazy" width="900" height="1100" />
+            <img class="player__slide" src="assets/player-nissa-sam-grant-2.jpg" alt="Nissa Sam-Grant warming up in an Arkansas State shooting shirt." loading="lazy" width="900" height="1100" />
+            <span class="player__tag">Signed</span>
+          </div>
+          <div class="player__meta">
+            <h3>Nissa Sam-Grant</h3>
+            <p class="player__pos"><span>Forward / Center</span><span>6'4"</span></p>
+            <p class="player__team"><b>North Adelaide</b><span>Australia</span></p>
+            <p class="player__bio">A defensive rim protector and rebounder built across several Division I and JUCO programmes. In her graduate season she led the Red Wolves with 39 blocks — 7th-most in a single season in Arkansas State history.</p>
+            <ul class="player__stats">
+              <li><b>39</b> Blocks in a season</li><li><b>Toronto</b> Passport</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="player reveal" data-delay="2">
+          <div class="player__photo player__photo--slides">
+            <img src="assets/player-julia-tuchscherer.jpg" alt="Julia Tuchscherer finishing inside for the London Lions." loading="lazy" width="900" height="1100" />
+            <img class="player__slide" src="assets/player-julia-tuchscherer-2.jpg" alt="Julia Tuchscherer driving through a double team for the London Lions." loading="lazy" width="900" height="1100" />
+            <span class="player__tag">Signed</span>
+          </div>
+          <div class="player__meta">
+            <h3>Julia Tuchscherer</h3>
+            <p class="player__pos"><span>Forward / Center</span><span>6'2"</span></p>
+            <p class="player__team"><b>London Lions</b><span>UK</span></p>
+            <p class="player__bio">Efficient scoring in the paint, interior defence, and passing vision rare for a frontcourt player. She joined the Lions in Super League Basketball after a standout career with the UFV Cascades.</p>
+            <ul class="player__stats">
+              <li><b>U Sports</b> UFV Cascades</li><li><b>Canadian</b> Passport</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="player reveal">
+          <div class="player__photo player__photo--slides">
+            <img src="assets/player-jayla-smith.jpg" alt="Jayla Smith lining up a shot in a Missouri uniform." loading="lazy" width="900" height="1100" />
+            <img class="player__slide" src="assets/player-jayla-smith-2.jpg" alt="Jayla Smith finishing at the rim for Missouri against Vanderbilt." loading="lazy" width="900" height="1100" />
+            <span class="player__tag player__tag--available">Now available</span>
+          </div>
+          <div class="player__meta">
+            <h3>Jayla Smith</h3>
+            <p class="player__pos"><span>Guard / Forward</span><span>6'0"</span></p>
+            <p class="player__team"><b>Missouri</b><span>SEC</span></p>
+            <p class="player__bio">A high-energy guard who scores at all three levels and has a tenacious knack for the ball on defence — a dynamic skillset built for the professional stage.</p>
+            <ul class="player__stats">
+              <li><b>No. 1</b> In Indiana</li><li><b>No. 42</b> National rank</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="player reveal" data-delay="1">
+          <div class="player__photo player__photo--slides">
+            <img src="assets/player-cheyenne-rowe.jpg" alt="Cheyenne Rowe in an Astro Ladies Bochum kit, spinning a ball on the bench." loading="lazy" width="900" height="1100" />
+            <img class="player__slide" src="assets/player-cheyenne-rowe-2.jpg" alt="Cheyenne Rowe on court for UTSA at the NCAA tournament." loading="lazy" width="900" height="1100" />
+            <span class="player__tag">Signed</span>
+          </div>
+          <div class="player__meta">
+            <h3>Cheyenne Rowe</h3>
+            <p class="player__pos"><span>Forward</span><span>6'2"</span></p>
+            <p class="player__team"><b>Astro Ladies Bochum</b><span>Germany</span></p>
+            <p class="player__bio">A high-motor starter and premier rebounder in the AAC who started all 33 games and helped guide UTSA to an NCAA appearance. Canadian, with interior presence and defensive grit.</p>
+            <ul class="player__stats">
+              <li><b>13.9</b> PPG</li><li><b>8.7</b> RPG</li><li><b>33</b> Starts</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="player reveal" data-delay="2">
+          <div class="player__photo player__photo--slides">
+            <img src="assets/player-jaylin-reed.jpg" alt="Jaylin Reed driving to the basket in Portugal." loading="lazy" width="900" height="1100" />
+            <img class="player__slide" src="assets/player-jaylin-reed-2.jpg" alt="Jaylin Reed on court for the Toowoomba Mountaineers in Australia." loading="lazy" width="900" height="1100" />
+            <span class="player__tag player__tag--available">Now available</span>
+          </div>
+          <div class="player__meta">
+            <h3>Jaylin Reed</h3>
+            <p class="player__pos"><span>Combo guard</span><span>6'3"</span></p>
+            <p class="player__team"><b>Free agent</b><span>Portugal, TBL, Australia</span></p>
+            <p class="player__bio">A proven scorer with unlimited range and a tight handle who puts up numbers quickly and efficiently — a leader who makes the players around him better on and off the court.</p>
+            <ul class="player__stats">
+              <li><b>3</b> Countries</li><li><b>Combo</b> Guard</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="player reveal">
+          <div class="player__photo player__photo--slides">
+            <img src="assets/player-abby-conlee.jpg" alt="Abby Conlee releasing a pass for the Jolly Jumpers." loading="lazy" width="900" height="1100" />
+            <img class="player__slide" src="assets/player-abby-conlee-2.jpg" alt="Abby Conlee finishing a layup in a green-and-white college uniform." loading="lazy" width="900" height="1100" />
+            <span class="player__tag">Signed</span>
+          </div>
+          <div class="player__meta">
+            <h3>Abby Conlee</h3>
+            <p class="player__pos"><span>Guard / Forward</span><span>6'0"</span></p>
+            <p class="player__team"><b>Jolly Jumpers</b><span>Netherlands</span></p>
+            <p class="player__bio">Dedicated to hard work, with a personality to match. She came through her last
+              season in England with Anglia Ruskin University before turning professional in the Netherlands.</p>
+            <ul class="player__stats">
+              <li><b>15.0</b> Points per game</li><li><b>8.0</b> Rebounds</li><li><b>2.5</b> Assists</li><li><b>35%</b> From three</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="player reveal" data-delay="1">
+          <div class="player__photo player__photo--slides">
+            <img src="assets/player-kylie-lavelle.jpg" alt="Kylie Lavelle contesting a shot at the rim for St. John's." loading="lazy" width="900" height="1100" />
+            <img class="player__slide" src="assets/player-kylie-lavelle-2.jpg" alt="Kylie Lavelle on court for Helios Basket." loading="lazy" width="900" height="1100" />
+            <span class="player__tag">Signed</span>
+          </div>
+          <div class="player__meta">
+            <h3>Kylie Lavelle</h3>
+            <p class="player__pos"><span>Forward / Center</span><span>6'2"</span></p>
+            <p class="player__team"><b>Helios Basket</b><span>Switzerland</span></p>
+            <p class="player__bio">A veteran with a wealth of BIG EAST experience and a versatile inside-out game —
+              high-percentage in the paint and mid-range, with the touch to stretch the floor. At 6'2" she defends
+              forwards and centers and rebounds, which makes her a hard matchup in pick-and-pop.</p>
+            <ul class="player__stats">
+              <li><b>BIG EAST</b> Conference veteran</li><li><b>St. John's</b> College</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="player reveal" data-delay="2">
+          <div class="player__photo player__photo--slides">
+            <img src="assets/player-jade-hill.jpg" alt="Jade Hill driving the ball for UBI Graz." loading="lazy" width="900" height="1100" />
+            <img class="player__slide" src="assets/player-jade-hill-2.jpg" alt="Jade Hill working against a double team for St. Thomas." loading="lazy" width="900" height="1100" />
+            <span class="player__tag">Signed</span>
+          </div>
+          <div class="player__meta">
+            <h3>Jade Hill</h3>
+            <p class="player__pos"><span>Guard</span><span>5'7"</span></p>
+            <p class="player__team"><b>UBI Graz</b><span>Austria</span></p>
+            <p class="player__bio">A tenacious guard who relishes going downhill and shoots consistently at every
+              level. She graduated from St. Thomas and is now in her second season with UBI Graz.</p>
+            <ul class="player__stats">
+              <li><b>14.3</b> Points per game</li><li><b>139</b> Assists</li><li><b>35</b> Steals</li><li><b>30</b> Starts, every game</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="player reveal">
+          <div class="player__photo player__photo--slides">
+            <img src="assets/player-jo-langbehn.jpg" alt="Jo Langbehn on court in a Wildcats kit in the UK." loading="lazy" width="900" height="1100" />
+            <img class="player__slide" src="assets/player-jo-langbehn-2.jpg" alt="Jo Langbehn at the free-throw line in Germany." loading="lazy" width="900" height="1100" />
+            <span class="player__tag">Signed</span>
+          </div>
+          <div class="player__meta">
+            <h3>Jo Langbehn</h3>
+            <p class="player__pos"><span>Forward</span><span>6'2"</span></p>
+            <p class="player__team"><b>Girolive Panthers</b><span>Germany</span></p>
+            <p class="player__bio">Led the Tommies in scoring and field-goal percentage, and took Summit League
+              All-Conference Honorable Mention in 2024–25 — including a 30-point night against Wichita State.
+              She has played in the UK and is now in her second season in Germany.</p>
+            <ul class="player__stats">
+              <li><b>67.9%</b> FG, 1st in the Summit</li><li><b>30</b> Season-high points</li><li><b>22</b> Games of 10+</li><li><b>30</b> Starts, every game</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="player reveal" data-delay="1">
+          <div class="player__photo player__photo--slides">
+            <img src="assets/player-david-oputa.jpg" alt="David Oputa in a Loughborough Students basketball kit." loading="lazy" width="900" height="1100" />
+            <img class="player__slide" src="assets/player-david-oputa-2.jpg" alt="David Oputa driving the ball for Drogheda Wolves." loading="lazy" width="900" height="1100" />
+            <span class="player__tag">Signed</span>
+          </div>
+          <div class="player__meta">
+            <h3>David Oputa</h3>
+            <p class="player__pos"><span>Forward</span><span>6'6"</span></p>
+            <p class="player__team"><b>Drogheda Wolves</b><span>Ireland</span></p>
+            <p class="player__bio">A hard worker at both ends who can guard players with more size on him, and who
+              attacks the rim with real aggression to finish the play.</p>
+            <ul class="player__stats">
+              <li><b>Loughborough</b> Students, UK</li><li><b>Two-way</b> Forward</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="player reveal" data-delay="1">
+          <div class="player__photo player__photo--slides">
+            <img src="assets/player-cydney-rivera.jpg" alt="Cydney Rivera with the ball in a studio portrait." loading="lazy" width="900" height="1100" />
+            <img class="player__slide" src="assets/player-cydney-rivera-2.jpg" alt="Cydney Rivera bringing the ball up the floor in Puerto Rico." loading="lazy" width="900" height="1100" />
+            <span class="player__tag player__tag--available">Now available</span>
+          </div>
+          <div class="player__meta">
+            <h3>Cydney Rivera</h3>
+            <p class="player__pos"><span>Point guard</span></p>
+            <p class="player__team"><b>Free agent</b><span>Puerto Rico</span></p>
+            <p class="player__bio">A fearless guard who makes everyone around her better — she can run a team and score at all three levels.</p>
+            <ul class="player__stats">
+              <li><b>Puerto Rico</b> Home</li><li><b>Three levels</b> Scoring range</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="player reveal" data-delay="2">
+          <div class="player__photo player__photo--slides">
+            <img src="assets/player-olivia-crigler.jpg" alt="Olivia Crigler with the ball in a studio portrait." loading="lazy" width="900" height="1100" />
+            <img class="player__slide" src="assets/player-olivia-crigler-2.jpg" alt="Olivia Crigler rising for a jump shot." loading="lazy" width="900" height="1100" />
+            <span class="player__tag player__tag--available">Now available</span>
+          </div>
+          <div class="player__meta">
+            <h3>Olivia Crigler</h3>
+            <p class="player__pos"><span>Shooting guard</span></p>
+            <p class="player__team"><b>Free agent</b></p>
+            <p class="player__bio">A sharpshooter who cannot be left open — the range is effectively unlimited. A hard worker who loves to compete, and who has proved it across several seasons.</p>
+            <ul class="player__stats">
+              <li><b>Unlimited</b> Shooting range</li><li><b>Proven</b> Across several seasons</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="player reveal">
+          <div class="player__photo player__photo--slides">
+            <img src="assets/player-jainaba-konateh.jpg" alt="Jainaba Konateh on court for National University." loading="lazy" width="900" height="1100" />
+            <img class="player__slide" src="assets/player-jainaba-konateh-2.jpg" alt="Jainaba Konateh shooting over two defenders in Cabo Verde." loading="lazy" width="900" height="1100" />
+            <span class="player__tag player__tag--available">Now available</span>
+          </div>
+          <div class="player__meta">
+            <h3>Jainaba Konateh</h3>
+            <p class="player__pos"><span>Center</span><span>6'5"</span></p>
+            <p class="player__team"><b>Free agent</b><span>Cotonou</span></p>
+            <p class="player__bio">A very strong center who plays dominantly in the paint and can step out and hit the open three. A huge presence who demands respect around the basket at both ends.</p>
+            <ul class="player__stats">
+              <li><b>Paint</b> Dominant presence</li><li><b>Open 3</b> Stretches the floor</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="player reveal" data-delay="1">
+          <div class="player__photo player__photo--slides">
+            <img src="assets/player-tessa-towers.jpg" alt="Tessa Towers in a Ball State uniform." loading="lazy" width="900" height="1100" />
+            <img class="player__slide" src="assets/player-tessa-towers-2.jpg" alt="Tessa Towers signing for young fans after a Ball State game." loading="lazy" width="900" height="1100" />
+            <span class="player__tag player__tag--nil">NIL</span>
+          </div>
+          <div class="player__meta">
+            <h3>Tessa Towers</h3>
+            <p class="player__pos"><span>Post</span><span>6'5"</span></p>
+            <p class="player__team"><b>Ball State</b><span>NCAA Division I</span></p>
+            <p class="player__bio">At 6'5" she has made herself one of the most dominant post presences in the NCAA. This is her final college season, and her production took a marked step up this past year.</p>
+            <ul class="player__stats">
+              <li><b>Final</b> College season</li><li><b>NIL</b> Representation</li>
+            </ul>
+          </div>
+        </article>
+
+        <a class="player player--cta reveal" href="#apply" data-delay="2">
+          <span class="player__cta-plus" aria-hidden="true">+</span>
+          <h3>Your name here</h3>
+          <p>Roster spots for 2026 are open. The next signing could be you.</p>
+          <span class="card__link card__link--on">Apply now</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ON THE FLOOR / GALLERY -->
+    <section class="floor" id="floor">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <h2>Where the work shows.</h2>
+        </div>
+        <p class="section-head__sub">Game nights, gym sessions, the moments between. The career we build is
+          earned one possession at a time.</p>
+      </div>
+      <div class="floor__grid">
+        <figure class="floor__item floor__item--tall reveal">
+          <img src="assets/action-green.jpg" alt="Abby Conlee finishing a layup in a green-and-white uniform." loading="lazy" width="1067" height="1600" />
+        </figure>
+        <div class="floor__stack">
+          <figure class="floor__item floor__item--wide reveal" data-delay="1">
+            <img src="assets/action-rim.jpg" alt="Two athletes contest a shot at the rim during a championship game." loading="lazy" width="1170" height="780" />
+            <figcaption>National finals, 2024</figcaption>
+          </figure>
+          <figure class="floor__item floor__item--box reveal" data-delay="2">
+            <img src="assets/action-spotlight.jpg" alt="Saniah Parker lining up a free throw under the lights." loading="lazy" width="472" height="599" />
+            <figcaption>Lights on, ice cold</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOUNDER -->
+    <section class="founder" id="founder">
+      <figure class="founder__portrait reveal">
+        <img src="assets/founder-portrait.jpg" alt="Marcus Reed, founder of Elite Global Athletes, in a shirt and tie." loading="lazy" width="1000" height="1250" />
+        <figcaption>
+          <b>Marcus Reed</b>
+          <span>Founder and WNBA agent</span>
+        </figcaption>
+      </figure>
+
+      <div class="founder__body reveal" data-delay="1">
+        <blockquote>“We don't sign numbers. We sign people — then we build a career that
+          outlasts the highlight reel.”</blockquote>
+        <p class="founder__alum">VCU and TVCC basketball alum.</p>
+        <ul class="founder__points">
+          <li><b>Player-first</b><p>A deliberately small roster means every athlete gets the agency's full weight behind them.</p></li>
+          <li><b>Built on the inside</b><p>Run by a former player and accredited agent who knows the locker room and the boardroom.</p></li>
+          <li><b>For the long career</b><p>We plan past the next contract — for the second act, the brand, and life after the game.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- APPLY / CTA -->
+    <section class="apply" id="apply">
+      <div class="apply__inner reveal">
+        <h2>Ready to turn pro?<br/>Let's get to work.</h2>
+        <p class="apply__sub">Tell us where you play. If your game is real, we'll be in touch within
+          three business days — no agents' jargon, just a straight conversation.</p>
+
+        <form class="apply__form" name="representation" method="POST"
+              data-netlify="true" netlify-honeypot="company"
+              aria-label="Request representation">
+          <input type="hidden" name="form-name" value="representation" />
+          <p class="apply__hp" aria-hidden="true">
+            <label>Leave this empty <input name="company" tabindex="-1" autocomplete="off" /></label>
+          </p>
+          <div class="field">
+            <label for="ap-name">Full name</label>
+            <input id="ap-name" name="name" type="text" placeholder="Jordan Carter" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="ap-email">Email</label>
+            <input id="ap-email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required />
+          </div>
+          <div class="field">
+            <label for="ap-level">Level / team</label>
+            <input id="ap-level" name="level" type="text" placeholder="e.g. NCAA D1, Westminster" />
+          </div>
+          <div class="field field--full">
+            <label for="ap-msg">Your game, in one line</label>
+            <input id="ap-msg" name="message" type="text" placeholder="Two-way guard, 18 PPG, looking to go pro overseas." />
+          </div>
+          <button class="btn btn--lg apply__submit" type="submit">Request representation</button>
+          <p class="apply__note">By submitting you agree to be contacted by Elite Global Athletes. We never share your details.</p>
+          <p class="apply__status" role="status" aria-live="polite" hidden></p>
+        </form>
+
+        <div class="apply__done" hidden>
+          <svg class="swish" viewBox="0 0 160 184" role="img" aria-label="A basketball dropping through the net." focusable="false">
+            <g class="swish__rig" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="34" y="10" width="92" height="58" rx="7" />
+              <rect x="64" y="36" width="32" height="24" rx="3" />
+              <path d="M50 68v6M110 68v6" />
+              <ellipse cx="80" cy="78" rx="30" ry="7.5" />
+              <g class="swish__net">
+                <path d="M52 81c2 14 7 24 12 31M108 81c-2 14-7 24-12 31M68 84c0 14 1 23 3 30M92 84c0 14-1 23-3 30M80 85v30" />
+                <path d="M57 95q23 9 46 0M63 108q17 7 34 0" />
+              </g>
+            </g>
+            <g class="swish__ball" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+              <circle cx="80" cy="150" r="17" />
+              <path d="M63 150h34M80 133v34M68.5 138.5c6 6 6 17 0 23M91.5 138.5c-6 6-6 17 0 23" />
+            </g>
+          </svg>
+
+          <h3 class="apply__done-title">Application sent.</h3>
+          <p class="apply__done-name"></p>
+          <p class="apply__done-sub">We read every one. If your game is a fit, we'll come back to you within three business days.</p>
+          <button class="apply__again" type="button">Send another application</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="brand__type">Elite Global<br/>Athletes</span>
+        <p>Global basketball management. Representing the next generation of the game.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h3>Agency</h3>
+        <a href="#roster">Roster</a>
+        <a href="#services">Representation</a>
+        <a href="#founder">About</a>
+        <a href="#apply">Apply</a>
+      </nav>
+      <nav aria-label="Social">
+        <h3>Follow</h3>
+        <a href="https://instagram.com/eliteglobalathletes" target="_blank" rel="noopener">Instagram</a>
+        <a href="#">X / Twitter</a>
+        <a href="#">LinkedIn</a>
+        <a href="#apply">Contact</a>
+      </nav>
+      <div class="footer__cta">
+        <h3>Think you've got it?</h3>
+        <a class="btn btn--primary" href="#apply">Request representation</a>
+      </div>
+    </div>
+    <div class="footer__base">
+      <span>© 2026 Elite Global Athletes. All rights reserved.</span>
+      <span>Founded by Marcus Reed, WNBA agent</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
