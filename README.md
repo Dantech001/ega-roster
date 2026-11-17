@@ -6,9 +6,17 @@ Live: https://eliteglobalathletes.com
 Hand-coded static site. No build step: `index.html`, `styles.css`, `script.js`
 and `assets/` are served as-is from the repository root.
 
-## Editing
+## Editing and publishing
 
-Edit the files directly. Push to `main` and Netlify deploys automatically.
+Edit the files directly, then from this folder run:
+
+    deploy "what you changed"
+
+That commits, pushes to GitHub and publishes to Netlify in one step.
+
+Git push alone does **not** deploy: the repo is private and this Netlify plan
+only builds commits from a verified GitHub-linked account, which this one is
+not. The CLI deploy in `deploy.cmd` sidesteps that.
 
 ## Roster cards
 
