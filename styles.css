@@ -458,6 +458,12 @@ img { display: block; max-width: 100%; }
   text-wrap: balance; margin: 0;
 }
 .founder__alum { color: var(--ink-soft); font-size: 0.95rem; margin-top: 16px; }
+.founder__link {
+  color: var(--primary); font-weight: 600; white-space: nowrap;
+  border-bottom: 1px solid color-mix(in srgb, var(--primary) 40%, transparent);
+  transition: border-color .2s var(--ease);
+}
+.founder__link:hover { border-bottom-color: var(--primary); }
 .founder__points {
   list-style: none; display: grid;
   margin-top: clamp(22px, 3vw, 34px); border-top: 1px solid var(--line);
